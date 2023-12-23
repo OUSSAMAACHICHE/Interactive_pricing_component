@@ -1,0 +1,282 @@
+/* Reset & Default Styling  */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	/* ### Primary */
+
+	--SoftCyan-FullSliderBar: hsl(174, 77%, 80%);
+	--StrongCyan-SliderBackround: hsl(174, 86%, 45%);
+	--Light-Grayish_Red_Discount-Background: hsl(14, 92%, 95%);
+	--Light-Red_Discount_Text: hsl(15, 100%, 70%);
+	--Pale-Blue-CTA_Text: hsl(226, 100%, 87%);
+
+	/* ### Neutral */
+
+	--White-Pricing_Component_Background: hsl(0, 0%, 100%);
+	--Very-Pale-Blue-Mai_Background: hsl(230, 100%, 99%);
+	--Light-Grayish-Blue-Empty_Slider_Bar: hsl(224, 65%, 95%);
+	--Light-Grayish-Blue-Toggle_Background: hsl(223, 50%, 87%);
+	--Grayish-Blue-Text: hsl(225, 20%, 60%);
+	--Dark-Desaturated-Blue-Text_CTA_Background: hsl(227, 35%, 25%);
+}
+
+body {
+	background: url(../../images/bg-pattern.svg) 90% -30% / 1600px no-repeat;
+	display: flex;
+	justify-content: center;
+	font-family: 'Manrope', sans-serif;
+	font-size: 15px;
+	min-height: 100vh;
+}
+
+img {
+	display: block;
+}
+
+/* Start Styling  */
+.header {
+	background: url('../../images/pattern-circles.svg') center center / contain no-repeat;
+	padding: 30px;
+	margin-top: 50px;
+	text-align: center;
+}
+
+
+
+.header .title {
+	color: var(--Dark-Desaturated-Blue-Text_CTA_Background);
+	font-size: 1.9rem;
+	margin-bottom: 8px;
+}
+
+.header .desc {
+	color: var(--Grayish-Blue-Text);
+	font-size: 1rem;
+}
+
+.pricing_content {
+	background-color: var(--White-Pricing_Component_Background);
+	padding: 40px;
+	margin-top: 50px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px var(--Pale-Blue-CTA_Text);
+	width: 560px;
+	position: relative;
+}
+.price_info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 50px;
+	margin-bottom: 35px;
+	color: var(--Grayish-Blue-Text);
+}
+
+.price_info .pageviews {
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+.price_info .pageviews span{
+	margin-right: 10px;
+}
+.price_info .result {
+	display: flex;
+	align-items: center;
+}
+.price_info .result .price {
+	color: var(--Dark-Desaturated-Blue-Text_CTA_Background);
+	font-weight: bold;
+	font-size: 2rem;
+	margin-right: 10px;
+}
+
+#range {
+	appearance: none;
+	width: 100%;
+	background: linear-gradient(90deg, var(--SoftCyan-FullSliderBar), 50%, var(--Light-Grayish-Blue-Empty_Slider_Bar) 50%);
+	height: 10px;
+	border-radius: 5px;
+	outline: none;
+	
+}
+
+#range::-webkit-slider-thumb {
+	appearance: none;
+	width: 35px;
+	height: 35px;
+	background-image: url('../../images/icon-slider.svg');
+	background-repeat: no-repeat;
+	background-color: var(--StrongCyan-SliderBackround);
+	background-position: 50%;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+#range::-webkit-slider-thumb:hover {
+	box-shadow: 0px 0px 10px var(--StrongCyan-SliderBackround);
+	background-color: var(--StrongCyan-SliderBackround);
+}
+.switch_btn {
+	display: flex;
+	justify-content: center;
+	padding: 30px;
+	margin-top: 20px;
+	position: relative;
+	align-items: center;
+}
+.switch_btn::after {
+	content: '25% discount';
+	position: absolute;
+	right: 10px;
+	font-size: 0.8rem;
+	border-radius: 10px;
+	padding: 3px;
+	background: var(--Light-Grayish_Red_Discount-Background);
+	color: var(--Light-Red_Discount_Text);
+	
+}
+.switch_btn .toggle_btn {
+	background-color: var(--Light-Grayish-Blue-Toggle_Background);
+	height: 25px;
+	width: 50px;
+	border-radius: 10px;
+	position: relative;
+	margin: 0 15px;
+	cursor: pointer;
+}
+.switch_btn .toggle_btn input {
+	appearance: none;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: var(--White-Pricing_Component_Background);
+	position: absolute;
+	top: 2.4px;
+	left: 5px;
+	cursor: pointer;
+}
+.switch_btn p {
+	font-size: 0.9rem;
+	color: var(--Grayish-Blue-Text);
+}
+hr {
+	width: 100%;
+	border: none;
+	border: 1px solid var(--Very-Pale-Blue-Mai_Background);
+	position: absolute;
+	left: 0;
+}
+/* Lists  */
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 30px;
+}
+.lists {
+	flex: 2;
+}
+.lists li {
+	list-style-type: none;
+	background-image: url('../../images/icon-check.svg');
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	margin: 5px 0;
+	background-position: 2px;
+	color: var(--Grayish-Blue-Text);
+	font-size: 0.9rem;
+
+}
+.footer .start_btn {
+	flex: 1;
+	padding: 10px 20px;
+	border-radius: 20px;
+	border: none;
+	background-color: var(--Dark-Desaturated-Blue-Text_CTA_Background);
+	color: var(--Grayish-Blue-Text);
+}
+.footer .start_btn:hover {
+	color: var(--White-Pricing_Component_Background);
+	cursor: pointer;
+}
+
+@media (max-width: 767px) {
+
+	.header {
+		background: url('../../images/pattern-circles.svg') center center / contain no-repeat;
+		background-size: 130px;
+	}
+	.header .title {
+		font-size: 1.5rem;
+	}
+	.header .desc {
+		font-size: 1rem;
+		width: 210px;
+		margin: auto;
+		line-height: 1.6;
+	}
+	.pricing_content {
+		width: 320px;
+		margin: auto;
+		margin-bottom: 100px;
+	}
+	.price_info {
+		flex-direction: column;
+		height: 150px;
+		margin: 0;
+	}
+	#range {
+		position: absolute;
+		left: 25px;
+		width: calc(100% - 50px);
+		top: 100px;
+	}
+	#monthly {
+		font-size: 0.7rem;
+	}
+	#yearly {
+		font-size: 0.7rem;
+	}
+	.switch_btn {
+		margin: 20px 0;
+		padding: 0;
+	}
+	.switch_btn .toggle_btn {
+		margin: 0 10px;
+	}
+	.switch_btn::after {
+		content: '-25%';
+		position: absolute;
+		right: -33px;
+	}
+	.footer {
+		flex-direction: column;
+		
+	}
+	.lists {
+		margin-bottom: 30px;
+	}
+	.lists li {
+		margin-bottom: 10px;
+	}
+	.footer .start_btn {
+		width: 200px;
+		padding: 15px;
+	}
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+	position: fixed;
+	bottom: 10px;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
